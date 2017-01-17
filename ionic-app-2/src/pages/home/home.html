@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+    <button ion-button menuToggle>
+    	<ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+	  <form [formGroup]="cadastro" (ngSubmit)="postDados()">
+	  	<ion-item>
+	  		<ion-label floating>Email</ion-label>
+	  		<ion-input type="mail" name="nome" formControlName="MAIL"></ion-input>
+	  	</ion-item>
+	  	<ion-item>
+	  		<ion-label floating>Password</ion-label>
+	  		<ion-input type="password" name="pass" formControlName="PASS"></ion-input>
+	  	</ion-item>
+	  	<ion-item>
+	  		<button [disabled]="cadastro.invalid" ion-button full block color="primary">Sign In</button>
+	  	</ion-item>
+	  </form>
+  </ion-list>
+</ion-content>
